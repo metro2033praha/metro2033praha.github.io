@@ -11,7 +11,16 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Metro 2033: Praha" startnode="1" creator="Twine" creator-version="2.2.1" ifid="591F639E-965D-49BF-9EAA-D515A34648A5" zoom="0.25" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* Twine */
+<tw-storydata name="Metro 2033: Praha" startnode="1" creator="Twine" creator-version="2.2.1" ifid="591F639E-965D-49BF-9EAA-D515A34648A5" zoom="0.25" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* Mobilní zařízení */
+
+@media screen and (max-width: 570px) {
+    tw-story {
+	  font-size: 125%;
+	  padding: 5% 5% 5% 5%;  
+    }
+}
+
+/* Twine */
 
 tw-story {
   
@@ -121,16 +130,6 @@ p {
   color: grey;
   margin-right: 15px;
 }
-	
-/* Mobilní zařízení */
-
-@media screen and (max-width: 800px) {
-    tw-story {
-	  font-size: 125%;
-	  padding: 5% 10% 5% 10%;  
-    }
-}
-
 
 
 
@@ -171,7 +170,7 @@ p {
 
 
 
-</script><tw-passagedata pid="1" name="Start" tags="intro" position="900,100" size="100,100">&lt;div style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;https://i.imgur.com/4cqEHxs.png&quot; alt=&quot;Metro 2033: Praha&quot; style=&quot;width: 85%;&quot;&gt;&lt;/div&gt;
+</script><tw-passagedata pid="1" name="Start" tags="intro" position="904,96" size="100,100">&lt;div style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;https://i.imgur.com/4cqEHxs.png&quot; alt=&quot;Metro 2033: Praha&quot; style=&quot;width: 85%;&quot;&gt;&lt;/div&gt;
 
 &lt;p style=&quot;text-align: center;&quot;&gt;Vítejte u rané betaverze postapokalyptické explorační textové hry&lt;/p&gt;
 &lt;p style=&quot;text-align: center; font-size: 125%;&quot;&gt;**Metro 2033: Praha**.&lt;/p&gt;
@@ -216,11 +215,11 @@ Tomáš pracuje jako převozník karavan pro Mírovou obchodní společnost. Nar
 &lt;p&gt;Ondra mezitím z ostatními obchodníky zorganizoval smuteční přípitek. Takové situace žádají pořádný alkohol, ten seshora, ne houbovici která se tu obyčejně pije . Připíjíte si na Martina a mohutný doušek alkoholu na tvůj lačný žaludek způsobil, že se ti trochu zamotala hlava. A to jsou podobné budíčky čím dál častější.&lt;/p&gt;
 &lt;p&gt;Rychle jsi to zajedl praženými houbami a vydal se vstříc tomuto pochmurnému ránu.
 
-&lt;div id=&quot;button_menu&quot;&gt;[[Porozhlédni se kolem|NM: Nemocnice]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="NM: Nemocnice" tags="NM" position="1700,700" size="100,100">(if: (history:) contains &quot;NM - Nástupiště&quot;)[&lt;p&gt;Říká se tomu tady Nemocnice a původně to tu jako nemocnice skutečně sloužilo. Dnes jde o největší obytný prostor na stanici, kde má svůj spacák nebo stan většina obyvatel. Ti movitější zde mají pro sebe i vlastní místnost. Název Nemocnice tomu však zůstal, aby dál mátl všechny poměrů neznalé návštěvníky. I když existuje jistá šance, že v případě nouze vás tady s trochou štěstí přeci jenom někdo ošetří.&lt;/p&gt;
+&lt;div id=&quot;button_menu&quot;&gt;[[Porozhlédni se kolem|NM: Nemocnice]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="NM: Nemocnice" tags="NM" position="1700,700" size="100,100">(if: (history:) contains &quot;NM: Nástupiště&quot;)[&lt;p&gt;Říká se tomu tady Nemocnice a původně to tu jako nemocnice skutečně sloužilo. Dnes jde o největší obytný prostor na stanici, kde má svůj spacák nebo stan většina obyvatel. Ti movitější zde mají pro sebe i vlastní místnost. Název Nemocnice tomu však zůstal, aby dál mátl všechny poměrů neznalé návštěvníky. I když existuje jistá šance, že v případě nouze vás tady s trochou štěstí přeci jenom někdo ošetří.&lt;/p&gt;
 &lt;p&gt;Chvíli po Válce měla Nemocnice  prvotřídní vybavení a ošetřovala desítky lidí; od popálenin, od ozáření, od všeho možného. Ve spojení s názvem stanice, tehdy se jí říkalo jenom Náměstí Míru, to v jejích obyvatelích zdvihlo vlnu mírotvorcovského nadšení, se kterou se rozhodli vzít pod svou ochranu zbídačenou stanici Jiřího z Poděbrad. Brzy se nadšení změnilo na pýchu a posedlost. Nemocnice byla náležitě pojmenována Nemocnice Míru, což je i název, jenž si většina obyvatel metra vybaví pod zkratkou NM, kterou se v oficiálních dokumentech stanice označovala, a později si celá stanice začala říkat Mírová stanice. Její představitelé to vzali tak vážně, že vyslali zvláštní expedici až do zamořené stanice Strašnická pro dlouhé Á, aby mohli poskládat nový název na stěnu nástupiště.&lt;/p&gt;](else:)[&lt;p&gt;Dvě řady stanů patřících převozníkům a dalším zaměstnancům Společnosti zaujímají v krytu výsostné postavení. Mírová stanice sice patří mezi bohatší části metra, ale i tak je hodně lidí v krytu rádo alespoň za ucházející spacák a vlastní stan tak působí jako poměrně výrazný luxus.&lt;/p&gt;
 &lt;p&gt;Tomuto místu se říká Nemocnice a původně to tu jako nemocnice skutečně sloužilo. Dnes jde o největší obytný prostor na stanici, kde má svůj spacák nebo stan většina obyvatel. Ti movitější zde mají pro sebe i vlastní místnost. Název Nemocnice tomu však zůstal, aby dál mátl všechny poměrů neznalé návštěvníky. I když existuje jistá šance, že v případě nouze vás tady s trochou štěstí přeci jenom někdo ošetří.&lt;/p&gt;]
 
-&lt;div id=&quot;button&quot;&gt;(if: (history:) contains &quot;NM - Nástupiště&quot;)[[[Vrátit se na nástupiště|NM: Nástupiště]]](else:)[[[Jít na nástupiště|NM: Nástupiště]]]&lt;/div&gt;
+&lt;div id=&quot;button&quot;&gt;(if: (history:) contains &quot;NM: Nástupiště&quot;)[[[Vrátit se na nástupiště|NM: Nástupiště]]](else:)[[[Jít na nástupiště|NM: Nástupiště]]]&lt;/div&gt;
 
 (unless: (history:) contains &quot;NM: Nemocnice&quot;)[(set: $mise to 1)]</tw-passagedata><tw-passagedata pid="6" name="NM: Nástupiště" tags="NM" position="1700,900" size="100,100">&lt;p&gt;Prostřední část trojlodního nástupiště osvětlují tlumená elektrická světla. Na jedné straně nástupiště jsou vzduchotěsné dveře, na druhé proražený otvor do zdi vedoucí do dalších prostor stanice, jmenovitě ke Kolektoru a do Nemocnice. Ke kolejišti vede na každé straně jeden pilířovitý průchod, ty zbylé byly zastavěny do jednotlivých drobných místností. V jedné z nich sídlí předseda stanice, ale není to příliš honosné místo, což samo vypovídá o poměrech fungování stanice. Je to Mírová obchodní společnost či pouze Společnost, jak se jí tady říká, kdo je skutečným hybatelem dění na stanici. Ty máš tu čest být jejím zaměstnancem.&lt;/p&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
