@@ -11,27 +11,7 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Metro 2033: Praha" startnode="1" creator="Twine" creator-version="2.2.1" ifid="591F639E-965D-49BF-9EAA-D515A34648A5" zoom="0.25" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* Mobilní zařízení */
-
-@media screen and (max-width: 1000px) {
-    tw-story {
-	  font-size: 18px;
-	  padding: 2em;
-    }
-  #buttton {
-	line-height: 1em;
-  }
-    #buttton_menu {
-	line-height: 1em;
-  }
-    #dlazdice {
-	line-height: 1em;
-  }
-	
-	
-}
-
-/* Twine */
+<tw-storydata name="Metro 2033: Praha" startnode="1" creator="Twine" creator-version="2.2.1" ifid="591F639E-965D-49BF-9EAA-D515A34648A5" zoom="0.6" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* Twine */
 
 tw-story {
   
@@ -46,6 +26,10 @@ tw-story {
   font-size: 16px;
   line-height: 150%;
   padding: 5% 20% 5% 20%;
+}
+
+tw-sidebar {
+  display: none;
 }
 
 tw-link, .enchantment-link {
@@ -132,15 +116,23 @@ p {
   padding: 20px;
   border: 1px solid white;
 }
+
 #poznamka {
   color:grey;
   font-size:75%;
+}
+
+
+#stred {
+  text-align: center;
 }
 
 #ukol {
   color: grey;
   margin-right: 15px;
 }
+
+
 
 
 
@@ -181,58 +173,60 @@ p {
 
 
 
+
+
 </script><tw-passagedata pid="1" name="Start" tags="intro" position="904,96" size="100,100">&lt;div style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;https://i.imgur.com/4cqEHxs.png&quot; alt=&quot;Metro 2033: Praha&quot; style=&quot;width: 85%;&quot;&gt;&lt;/div&gt;
 
 &lt;p style=&quot;text-align: center;&quot;&gt;Vítejte u rané betaverze postapokalyptické explorační textové hry&lt;/p&gt;
 &lt;p style=&quot;text-align: center; font-size: 125%;&quot;&gt;**Metro 2033: Praha**.&lt;/p&gt;
-&lt;p&gt;**P**íše se rok 2033 a od války, která vyhubila velkou část lidstva, uběhlo zhruba dvacet let. Poslední zbytky civilizace přežívají v odlehlých koutech světa anebo se ukryly pod zem do protiatomových krytů. Jedním z nejrozsáhlejších je systém pražského metra, který měl svého času poskytnout krátkodobý úkryt až pro 300 tisíc lidí. Jak vypadá pražské metro a život v něm dvacet let po apokalypse? Nezbývá než se přesvědčit na vlastní oči.&lt;/p&gt;
-&lt;p&gt;Hra se odkazuje na (link-repeat:&quot;*&lt;u&gt;Universe of Metro 2033&lt;/u&gt;*&quot;)[(gotoURL:&quot;https://en.wikipedia.org/wiki/Metro_(franchise)#Other_novels&quot;)], sérii povídek, románů a dalších děl od rozličných autorů, které spojuje svět vytvořený ruským spisovatelem Dmitrijem Gluchovským ve světovém bestselleru Metro 2033 a jeho pokračováních Metro 2034 a Metro 2035. Znalost knih nebo jejich herních adaptací není pro hraní této textovky nezbytná, ovšem může pozitivně ovlivnit váš herní prožitek.&lt;/p&gt;
+&lt;p&gt;**P**íše se rok 2033. Od války, která vyhubila velkou část lidstva, uběhlo zhruba dvacet let a poslední zbytky civilizace přežívají pouze v odlehlých koutech světa anebo se uchýlily pod zem do protiatomových krytů. Jedním z těch nejrozsáhlejších je ochranný systém pražského metra, který měl svého času poskytnout krátkodobý úkryt až pro 300 tisíc lidí. Jak vypadá pražské metro a život v něm dvacet let po apokalypse? Nezbývá než se přesvědčit na vlastní oči...&lt;/p&gt;
+&lt;p&gt;Hra se odkazuje na (link-repeat:&quot;*&lt;u&gt;Universe of Metro 2033&lt;/u&gt;*&quot;)[(gotoURL:&quot;https://en.wikipedia.org/wiki/Metro_(franchise)#Other_novels&quot;)], sérii povídek, románů a dalších děl od rozličných autorů, které spojuje svět vytvořený ruským spisovatelem Dmitrijem Gluchovským ve světovém bestselleru Metro 2033 a v jeho pokračováních Metro 2034 a Metro 2035. Znalost knih nebo jejich herních adaptací není pro hraní této textovky nezbytná, ovšem bezesporu pozitivně ovlivní váš herní prožitek.&lt;/p&gt;
 (if: (saved-games:) contains &quot;save file&quot;)[&lt;div id=&quot;button_menu&quot;&gt;(link: &quot;Pokračovat ve hře&quot;)[(load-game: &quot;save file&quot;)]&lt;/div&gt;]
 &lt;div id=&quot;button_menu&quot;&gt;(if: (saved-games:) contains &quot;save file&quot;)[[[Začít novou hru|Úvod: Postava]]](else:)[[[[Začít novou hru|Úvod: Instrukce]]]]&lt;/div&gt;
 &lt;p style=&quot;text-align: center; margin: 10%;&quot;&gt;&lt;span id=&quot;dlazdice&quot;&gt;(link-reveal:&quot;Mapa metra&quot;)[(gotoURL:&quot;https://i.imgur.com/H8vgVd7.png&quot;)]&lt;/span&gt; &lt;span id=&quot;dlazdice&quot;&gt;(link-reveal:&quot;Artworky&quot;)[(gotoURL:&quot;https://www.deviantart.com/marquecz/gallery/67697224/Metro-2033-Prague&quot;)]&lt;/span&gt;  &lt;span id=&quot;dlazdice&quot;&gt;[[Více o hře]]&lt;/span&gt;&lt;/div&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align: center;&quot;&gt;Vytvořeno pomocí nástroje (link:&quot;&lt;u&gt;Twine 2&lt;/u&gt;&quot;)[(gotoURL:&quot;http://twinery.org/&quot;)]. 
+&lt;p style=&quot;text-align: center;&quot;&gt;Vytvořeno pomocí platformy (link:&quot;&lt;u&gt;Twine 2&lt;/u&gt;&quot;)[(gotoURL:&quot;http://twinery.org/&quot;)]. 
 © 2019 marquecz.&lt;/p&gt;</tw-passagedata><tw-passagedata pid="2" name="Úvod: Postava" tags="intro" position="1300,100" size="100,100">&lt;div id=&quot;poznamka&quot;&gt;&lt;span style=&quot;color: red;&quot;&gt;!&lt;/span&gt; Hra je v současné době v testovací betaverzi a některé možnosti jsou zatím uzavřené. V budoucnu bude možné vybírat z více postav a prozkoumávat více částí metra.&lt;/div&gt;
 &lt;div id=&quot;postava&quot;&gt;**Tomáš**
-Tomáš pracuje jako převozník karavan pro Mírovou obchodní společnost. Narodil se asi před osmnácti lety na stanici Jiřího z Poděbrad a je prvním místním obyvatelem, kterému se podařilo získat u společnosti takto významnou pozici. Předtím roznášel zboží do spřátelených stanic, díky čemuž se dostal i do vzdálenějších částí metra.
+Tomáš pracuje jako převozník karavan pro Mírovou obchodní společnost. Narodil se asi před osmnácti lety na stanici Jiřího z Poděbrad a je prvním místním obyvatelem, kterému se podařilo získat u společnosti takto významnou pozici. Předtím roznášel zboží do spřátelených stanic, díky čemuž se v minulosti dostal i do vzdálenějších částí metra.
 
 &lt;div id=&quot;button&quot;&gt;[[Vybrat tuto postavu|Úvod: Prolog]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Úvod: Prolog" tags="" position="1500,100" size="100,100">&lt;h2 style=&quot;text-align: center;&quot;&gt;PROLOG&lt;/h2&gt;
-&lt;p&gt;**C**esta na Chodov většině karavan trvala asi půl dne. Dan obvykle pracoval sám a mezi ostatními převozníky patřil k těm rychlejším, takže pokud nesl malý náklad a celá cesta se obešla bez komplikací, zvládl projít celým tunelem dvakrát rychleji. Tentokrát ho doprovázel Martin. S ním Dan vždy spolupracoval rád, protože je stejně svižný jako on a nosí s sebou vždy tu svoji pušku. Na zbraně Dan nikdy nebyl a za dobu, co v tunelu převáží, se naštěstí ani nedostal do situace, kdy by nějaké potřeboval, nanejvýš se setkal s protijedoucím převozníkem konkurence. To se pak chvíli handrkovali o to, kdo složí vozík z jednokolejky a většinou nedošlo dál než na pár ostřejším slov. Tak to alespoň chodilo, než se objevili oni.&lt;/p&gt;
-&lt;p&gt;&quot;Tu pušku máš po dědovi, jsi říkal?&quot; prořízl Dan ticho.&lt;/p&gt;
+&lt;p&gt;**C**esta na Chodov většině karavan trvala asi půl dne. Pokud náklad nebyl příliš velký a celá cesta s obešla bez komplikací, zvládal to Dan za polovinu času. Mezi převozníky Mírové obchodní společnosti patřil k těm nejrychlejším a málokdo se mu tempem vyrovnal, proto také většinou pracoval sám, tedy dokud nebyly jednočlenné karavany zakázány. Tentokrát ho doprovázel Martin. S ním Dan vždy sloužil rád, neboť byl stejně svižný jako on a vždy s sebou nosil tu svoji pušku. Ke zbraním se Dan nikdy moc neměl a za tu dobu, co v tunelu převáží, se naštěstí ani nedostal do situace, kdy by nějaké potřeboval. Nanejvýš se setkal s protijedoucím převozníkem konkurence, to se pak chvíli handrkovali o to, kdo složí vozík z jednokolejky a většinou nedošlo dál než na pár ostřejším slov. Tak to alespoň chodilo, než se tu objevili oni.&lt;/p&gt;
+&lt;p&gt;&quot;Tu pušku máš po dědovi, jsi říkal, viď?&quot; prořízl Dan uprostřed cesty ticho.&lt;/p&gt;
 &lt;p&gt;&quot;Jo.&quot; otočil se Martin poněkud rozpačitě a poupravil si flintu na rameni.&lt;/p&gt;
-&lt;p&gt;Dan pokračoval: &quot;On dřív, před tím, tam nahoře hlídal potvory a tak, viď?&quot;&lt;/p&gt;
-&lt;p&gt;&quot;Myslivec se tomu říkalo.&quot; doplnil ho Martin, &quot;Staral se o zvířata v lese a občas je i lovil. Dobře, že si vzal tuhle věcičku s sebou dolů, když to přišlo.&quot; poklepal na svoji pušku a znovu si ji upravil na rameni, poté opět ztichl a tunelem se rozléhalo jen vzdálené kapání vody.&lt;/p&gt;
-&lt;p&gt;&quot;Myslíš, že kdyby se objevili, bude nám proti nim stačit?&quot; zeptal se Dan spíše pro sebe a ani neočekával odpověď a v jeho hlase přitom byl slyšet sotva zpozorovatelný záblesk nervozity, který si Dan okamžitě upravil odkašláním. Občas se stávalo, že když se někdo příliš chlubil svým výdělkem nebo vzácností nákladu, někdo jiný si na něj počkal v postranním tunelu. V poslední době ale stále víc převozníků mluví o banditech, údajně jsou překvapivě dobře vyzbrojení, zničehonic se objeví a zase mizí s celými karavanami. Kam, to nikdo neví.&lt;/p&gt;
-&lt;p&gt;Zrovna minuli další postranní tunel. Byl zabedněný pár prkny, na jeho druhé straně nebylo nic než neproniknutelná temnota. Většina kolektorové sítě zůstala neprozkoumána, plány mají možná Tacani, ale jestli ano, nikomu se s nimi nepochlubili. Používá se tedy jenom úsek mezi Mírovou stanicí a Chodovem, ostatní postranní tunely byly zatarasené, ty blíž Mírové stanici zazděné, dál bývaly jen pobité prkny nebo zaházené haraburdím. Čím blíže Chodovu, tím častěji zůstávaly postranní tunely zcela odkryté. Některé zakrývali husté pavučiny a vánek, ve kterém se jemně vlnily naznačoval, že na druhé straně tunelu je možná cesta na povrch. Jiné byly polorozbořené a zbytky jejich omítky poseté rýhami, které vypadaly jako stopy po drápech. Na stěnách některých byly tmavě rudé skvrny, na jejichž původ bylo lepší nemyslet. Dan se podíval na zašlé značení postranního tunelu - byly asi za polovinou cesty. Dnešní náklad byl poměrně těžký, dva pytle brambor a hub, něco, co s trochou fantazie mohlo být označeno jako uzená kýta, dozimetr a to, co bylo pravou podstatou směny, tajůplná černá taška, která ležela na dně vozíku. Dan občas vozil tajné zásilky, ať už šlo o opiáty nebo načerno propašovanou munici, ze zásady se na nic neptal a ani ho to nezajímalo. Převozníka zajímá především cena, vědět cokoliv ostatního je vždy spíše na škodu.&lt;/p&gt; 
-&lt;p&gt;&quot;Slyšels to?&quot; zeptal se zničehonic nejistě Martin, &quot;Bylo to jako kroky...&quot;. &lt;/p&gt;
+&lt;p&gt;Dan pokračoval: &quot;On dřív, před tím, tam nahoře nějak hlídal ty potvory a tak, že jo?&quot;&lt;/p&gt;
+&lt;p&gt;&quot;Myslivec se tomu říkalo.&quot; doplnil ho Martin, &quot;Staral se o zvířata v lese a občas je i lovil. Dobře, že ho napadlo vzít si tuhle věcičku s sebou dolů, když to přišlo.&quot; poklepal na svoji pušku a znovu si ji upravil na rameni, poté opět ztichl a tunelem se rozléhalo jen vzdálené kapání vody.&lt;/p&gt;
+&lt;p&gt;&quot;Myslíš, že kdyby se objevili, bude nám proti nim stačit?&quot; zeptal se Dan spíše pro sebe a ani neočekával odpověď a v jeho hlase přitom zazněl sotva zpozorovatelný záblesk nervozity, který si Dan okamžitě upravil odkašláním. Občas se stávalo, že když se někdo příliš chlubil svým výdělkem nebo vzácností nákladu, někdo jiný si na něj počkal v postranním tunelu. V poslední době ale stále víc převozníků mluví o banditech. Údajně jsou překvapivě dobře vyzbrojení, zničehonic se objeví a zase mizí i s celými karavanami. Kam, to nikdo neví.&lt;/p&gt;
+&lt;p&gt;Zrovna minuli další postranní tunel. Byl zabedněný pár prkny a za nimi nebylo nic než neproniknutelná temnota. Většina kolektorové sítě, navzdory původním snahám, zůstala neprozkoumána, plány mají možná Tacani, ale jestli ano, nikomu se s nimi nepochlubili. Používá se tedy jenom úsek mezi Mírovou stanicí a Chodovem, ostatní postranní tunely byly zatarasené, ty blíž Mírové stanici zazděné, dál bývaly jen pobité prkny nebo zaházené haraburdím. Čím blíže Chodovu, tím častěji zůstávaly postranní tunely zcela odkryté. Některé zakrývaly husté pavučiny a vánek, ve kterém se jemně vlnily naznačoval, že na druhé straně tunelu je možná cesta na povrch. Jiné byly polorozbořené a zbytky jejich omítky poseté rýhami, které mohly připomínat stopy po drápech. Na stěnách dalších zas byly tmavě rudé skvrny, na jejichž původ bylo lepší nemyslet. Dan se podíval na zašlé značení postranního tunelu - byly asi za polovinou cesty. Dnešní náklad byl poměrně těžký, dva pytle brambor a hub, něco, co s trochou fantazie mohlo být označeno jako uzená kýta, dozimetr a to, co bylo pravou podstatou směny, tajůplná černá taška, která ležela na dně vozíku. Dan občas vozil tajné zásilky, ať už šlo o opiáty nebo načerno propašovanou munici, ze zásady se na nic neptal a ani ho to nezajímalo. Převozníka zajímá především cena, vědět cokoliv ostatního je vždy spíše na škodu.&lt;/p&gt; 
+&lt;p&gt;&quot;Slyšels to?&quot; zeptal se Dana zničehonic nejistě Martin, &quot;Bylo to jako kroky...&quot;. &lt;/p&gt;
 &lt;p&gt;Martin si stáhl pušku z ramena a nabil ji, &quot;Haló! Kdo tam?!&quot; Nic se neozývalo.&lt;/p&gt;
 &lt;p&gt;&quot;Nic neslyším, třeba se ti to jen zdálo,&quot; ujišťoval Dan spíš sebe než Martina, &quot;možná to byla jen stará trubka nebo krysa, jsou tady sakra velký krysy.&quot;&lt;/p&gt;
 &lt;p&gt;&quot;Ne.&quot; odpověděl Martin a přiložil si pušku k líci.&lt;/p&gt;
 &lt;p&gt;&quot;Člověk, nebo nějaká potvora?&quot;&lt;/p&gt;
 &lt;p&gt;&quot;Člověk, slyšel jsem lidský kroky zatraceně. Kdo tam?!&quot; zakřičel Martin znova.&lt;/p&gt; 
-&lt;p&gt;Z tunelu se však nic neozývalo. Z dálky bylo slyšet jen nekonečně kapající vodu. Dan přestal tlačit vozík a hmátnul po železné tyči, kterou měl schovanou v něm a baterkou zamířil do tmy tunelu před nimi. Martin měl pušku stále připravenou. Proud světla však neodhalil nic.&lt;/p&gt;
-&lt;p&gt;&quot;Nemůže to být jinej převozník? Nikdo krom nás by teď v tunelu být neměl, ale třeba ho Chodovští vyhnali z trhu dřív a teď...&quot;&lt;/p&gt; 
+&lt;p&gt;Z tunelu se však nic neozývalo. Z dálky bylo slyšet jen nekonečně kapající vodu. Dan přestal tlačit vozík a hmátnul po železné tyči, kterou měl schovanou v něm a baterkou namířil do tmy tunelu před nimi. Martin měl pušku stále připravenou. Proud světla však neodhalil nic.&lt;/p&gt;
+&lt;p&gt;&quot;Nemůže to být jinej převozník? Nikdo krom nás by teď v tunelu bejt neměl, ale třeba ho Chodovští vyhnali z trhu dřív a teď...&quot;&lt;/p&gt; 
 &lt;p&gt;Další, tentokát rachotivý zvuk přerušil Danova slova. Martin zakřičel naučenou frázi: &quot;Jménem Mírové obchodní společnosti se legitimujte!&quot;. Ozvěna se ozvala o něco blíž a Martin vystřelil. Pod nohami jim proběhla obrovská tlustá krysa s plechovkou na ocase.&lt;/p&gt;
-&lt;p&gt;&quot;Čí to jsou kurva nápady,&quot; Martin vztekle přebíjel, &quot;motat krysám na vocas plechovky?!&quot;.&lt;/p&gt;
-&lt;p&gt;Chvíli ještě potichu vyčkávali, a pak si Martin hodil pušku zpátky na rameno a dal se opět do pohybu, Dan uklidil železnou tyč a také zatlačil do vozíku. Skřípot zrezivělých kol v tom ale přehlušil docela jiný nepřijemný zvuk a Martin padl k zemi.&lt;/p&gt;
+&lt;p&gt;&quot;Čí to jsou, kurva, nápady,&quot; Martin vztekle přebíjel, &quot;motat krysám na vocas plechovky?!&quot;.&lt;/p&gt;
+&lt;p&gt;Chvíli ještě potichu vyčkávali, a pak si Martin hodil pušku zpátky na rameno a dal se opět do pohybu, Dan uklidil železnou tyč a také zatlačil do svého vozíku. Skřípot zrezivělých kol v tom ale přehlušil docela jiný, hlasitější zvuk a Martin padl k zemi.&lt;/p&gt;
 
 &lt;div id=&quot;button_menu&quot;&gt;[[Nyní je na čase začít svůj vlastní příběh|Úvod: Expozice]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Úvod: Expozice" tags="" position="1700,101" size="100,100">&lt;h3 style=&quot;text-align: center; margin-bottom: 0;&quot;&gt;*Tomáš*&lt;/h3&gt;
 &lt;h2 style=&quot;text-align: center; margin-top: 0;&quot;&gt;KAPITOLA I&lt;/h2&gt;
 &lt;p&gt;&quot;Dělej, vstávej, přepadli další karavan!&quot; budil tě naléhavě jeden z tvých kolegů a zběsile přitom lomcoval tvým stanem.&lt;/p&gt;
-&lt;p&gt;Rychle jsi vylezl ze spacáku a rozepnul zip stanu. Vážnost situace ti nedovolila se na kolegu utrhnout, tak jsi se aspoň snažil, aby si všiml tvého mračícího se výrazu. Když jsi ale vylezl ze stanu, budil už se stejnou zprávou tvého nic netušícího souseda.&lt;/p&gt;
+&lt;p&gt;Rychle jsi vylezl ze spacáku a rozepnul zip stanu. Vážnost situace ti nedovolila se na kolegu utrhnout, tak jsi si alespoň dal záležet, aby si všiml tvého mračícího se výrazu. Když jsi ale ze stanu vylezl, budil už se stejnou zprávou tvého nic netušícího souseda.&lt;/p&gt;
 &lt;p&gt;&quot;Ondro!&quot; zavolal jsi na něj, &quot;Kdo to schytal tentokrát?&quot;&lt;/p&gt;
 &lt;p&gt;Ondra se na tebe otočil a zklopil zrak: &quot;Martin s Danem. Danovi se povedlo utýct. Martin to chytnul mezi voči.&quot;&lt;/p&gt;
-&lt;p&gt;Bylo ti smutno. Dan i Martin patřili k těm lepším převozníkům. Byli zhruba stejně staří jako ty, možná o pár let starší a cestu Kolektorem zvládli rychleji, než kdokoliv jiný. Mimo to to byli, pokud se to v dravém prostředí zaměstnanců Společnosti tak dá nazvat, tví přátelé.&lt;/p&gt; 
-&lt;p&gt;Smutno ti bylo, i když jsi pomyslel na to, co bude následovat. Kolektor se patrně na pár dní uzavře a Společnost po tobě bude chtít, abys ji finanční ztrátu dorovnal roznášením zboží po zbytku metra, jako za starých časů. Nutno dodat, že toho zboží bude nejspíš tak dvakrát tolik.&lt;/p&gt;
-&lt;p&gt;Ondra mezitím z ostatními obchodníky zorganizoval smuteční přípitek. Takové situace žádají pořádný alkohol, ten seshora, ne houbovici která se tu obyčejně pije . Připíjíte si na Martina a mohutný doušek alkoholu na tvůj lačný žaludek způsobil, že se ti trochu zamotala hlava. A to jsou podobné budíčky čím dál častější.&lt;/p&gt;
-&lt;p&gt;Rychle jsi to zajedl praženými houbami a vydal se vstříc tomuto pochmurnému ránu.
+&lt;p&gt;Bylo ti smutno. Dan i Martin patřili k těm lepším převozníkům. Byli zhruba stejně staří jako ty, možná o pár let starší a cestu Kolektorem zvládli rychleji, než kdokoliv jiný. Krom toho to byli, pokud se to v dravém prostředí zaměstnanců Společnosti tak dá nazvat, tví přátelé.&lt;/p&gt; 
+&lt;p&gt;A smutno ti bylo, i když jsi pomyslel na to, co bude následovat. Kolektor se patrně na pár dní uzavře a Společnost po tobě bude chtít, abys ji finanční ztrátu dorovnal roznášením zboží po zbytku metra, jako za starých časů. Nutno dodat, že toho zboží bude nejspíš tak dvakrát tolik.&lt;/p&gt;
+&lt;p&gt;Ondra mezitím s ostatními obchodníky zorganizoval smuteční přípitek. Takové situace žádají pořádný alkohol, ten seshora, ne houbovici která se tu obyčejně pije. Připíjíte si na Martina a mohutný doušek alkoholu na tvůj lačný žaludek způsobil, že se ti trochu zamotala hlava. A to jsou podobné budíčky čím dál častější.&lt;/p&gt;
+&lt;p&gt;Rychle jsi to zajedl praženými houbami a vydal se vstříc dalšímu pochmurnému ránu.
 
-&lt;div id=&quot;button_menu&quot;&gt;[[Porozhlédni se kolem|NM: Nemocnice]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="NM: Nemocnice" tags="NM" position="1700,700" size="100,100">(if: (history:) contains &quot;NM: Nástupiště&quot;)[&lt;p&gt;Říká se tomu tady Nemocnice a původně to tu jako nemocnice skutečně sloužilo. Dnes jde o největší obytný prostor na stanici, kde má svůj spacák nebo stan většina obyvatel. Ti movitější zde mají pro sebe i vlastní místnost. Název Nemocnice tomu však zůstal, aby dál mátl všechny poměrů neznalé návštěvníky. I když existuje jistá šance, že v případě nouze vás tady s trochou štěstí přeci jenom někdo ošetří.&lt;/p&gt;
-&lt;p&gt;Chvíli po Válce měla Nemocnice  prvotřídní vybavení a ošetřovala desítky lidí; od popálenin, od ozáření, od všeho možného. Ve spojení s názvem stanice, tehdy se jí říkalo jenom Náměstí Míru, to v jejích obyvatelích zdvihlo vlnu mírotvorcovského nadšení, se kterou se rozhodli vzít pod svou ochranu zbídačenou stanici Jiřího z Poděbrad. Brzy se nadšení změnilo na pýchu a posedlost. Nemocnice byla náležitě pojmenována Nemocnice Míru, což je i název, jenž si většina obyvatel metra vybaví pod zkratkou NM, kterou se v oficiálních dokumentech stanice označovala, a později si celá stanice začala říkat Mírová stanice. Její představitelé to vzali tak vážně, že vyslali zvláštní expedici až do zamořené stanice Strašnická pro dlouhé Á, aby mohli poskládat nový název na stěnu nástupiště.&lt;/p&gt;](else:)[&lt;p&gt;Dvě řady stanů patřících převozníkům a dalším zaměstnancům Společnosti zaujímají v krytu výsostné postavení. Mírová stanice sice patří mezi bohatší části metra, ale i tak je hodně lidí v krytu rádo alespoň za ucházející spacák a vlastní stan tak působí jako poměrně výrazný luxus.&lt;/p&gt;
-&lt;p&gt;Tomuto místu se říká Nemocnice a původně to tu jako nemocnice skutečně sloužilo. Dnes jde o největší obytný prostor na stanici, kde má svůj spacák nebo stan většina obyvatel. Ti movitější zde mají pro sebe i vlastní místnost. Název Nemocnice tomu však zůstal, aby dál mátl všechny poměrů neznalé návštěvníky. I když existuje jistá šance, že v případě nouze vás tady s trochou štěstí přeci jenom někdo ošetří.&lt;/p&gt;]
+&lt;div id=&quot;button_menu&quot;&gt;[[Porozhlédni se kolem|NM: Nemocnice]]&lt;/div&gt;
+(set: $mise to 1)</tw-passagedata><tw-passagedata pid="5" name="NM: Nemocnice" tags="NM" position="1700,700" size="100,100">(if: (history:) contains &quot;NM: Nástupiště&quot;)[&lt;p&gt;Říká se tomu tady Nemocnice a původně to tu jako nemocnice skutečně sloužilo. Dnes jde o největší obytný prostor na stanici, kde má svůj spacák nebo stan většina obyvatel. Ti movitější zde mají pro sebe i vlastní místnost. Název Nemocnice tomu však zůstal, aby dál mátl všechny poměrů neznalé návštěvníky. I když existuje jistá šance, že v případě nouze vás tady s trochou štěstí přeci jenom někdo ošetří.&lt;/p&gt;
+&lt;p&gt;Chvíli po Válce měla Nemocnice  prvotřídní vybavení a ošetřovala desítky lidí; od popálenin, od ozáření, od všeho možného. Ve spojení s názvem stanice, tehdy se jí říkalo jenom Náměstí Míru, to v jejích obyvatelích zdvihlo vlnu mírotvorcovského nadšení, se kterou se rozhodli vzít pod svou ochranu zbídačenou stanici Jiřího z Poděbrad. Brzy se nadšení změnilo na pýchu a posedlost. Nemocnice byla náležitě pojmenována Nemocnice Míru, což je i název, jenž si většina obyvatel metra vybaví pod zkratkou NM, kterou se v oficiálních dokumentech stanice označovala, a později si celá stanice začala říkat Mírová stanice. Její představitelé to vzali tak vážně, že vyslali zvláštní expedici až do zamořené stanice Strašnická pro písmeno C, aby mohli poskládat nový název na stěnu nástupiště.&lt;/p&gt;](else:)[&lt;p&gt;Dvě řady stanů patřících převozníkům a dalším zaměstnancům Společnosti zaujímají v krytu výsostné postavení. Mírová stanice sice patří mezi bohatší části metra, ale i tak je hodně lidí v krytu rádo alespoň za ucházející spacák a vlastní stan tak působí jako poměrně výrazný luxus.&lt;/p&gt;
+&lt;p&gt;Tomuto místu se říká Nemocnice a původně to tu jako nemocnice skutečně sloužilo. Dnes jde o největší obytný prostor na stanici, kde má svůj spacák nebo stan většina obyvatel. Ti movitější zde mají pro sebe i vlastní místnost. Název Nemocnice tomu však zůstal, aby dál mátl všechny poměrů neznalé návštěvníky. I když existuje jistá šance, že v případě nouze vás tady s trochou štěstí přeci jenom někdo ošetří.&lt;/p&gt;
+&lt;p&gt; I když se ti do toho vůbec nechce a rád bys ještě pár minut strávil rozhlížením se po prostoru, který dávno dobře znáš, měl bys zajít za svým předákem ke vstupu do Kolektoru a optat se, jak to bude vypadat s jeho uzavírkou.&lt;/p&gt;]
 
-&lt;div id=&quot;button&quot;&gt;(if: (history:) contains &quot;NM: Nástupiště&quot;)[[[Vrátit se na nástupiště|NM: Nástupiště]]](else:)[[[Jít na nástupiště|NM: Nástupiště]]]&lt;/div&gt;
-
-(unless: (history:) contains &quot;NM: Nemocnice&quot;)[(set: $mise to 1)]</tw-passagedata><tw-passagedata pid="6" name="NM: Nástupiště" tags="NM" position="1700,900" size="100,100">&lt;p&gt;Prostřední část trojlodního nástupiště osvětlují tlumená elektrická světla. Na jedné straně nástupiště jsou vzduchotěsné dveře, na druhé proražený otvor do zdi vedoucí do dalších prostor stanice, jmenovitě ke Kolektoru a do Nemocnice. Ke kolejišti vede na každé straně jeden pilířovitý průchod, ty zbylé byly zastavěny do jednotlivých drobných místností. V jedné z nich sídlí předseda stanice, ale není to příliš honosné místo, což samo vypovídá o poměrech fungování stanice. Je to Mírová obchodní společnost či pouze Společnost, jak se jí tady říká, kdo je skutečným hybatelem dění na stanici. Ty máš tu čest být jejím zaměstnancem.&lt;/p&gt;
+&lt;div id=&quot;button&quot;&gt;(if: (history:) contains &quot;NM: Nástupiště&quot;)[[[Vrátit se na nástupiště|NM: Nástupiště]]](else:)[[[Jít na nástupiště|NM: Nástupiště]]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="NM: Nástupiště" tags="NM" position="1700,900" size="100,100">&lt;p&gt;Prostřední část trojlodního nástupiště osvětlují tlumená elektrická světla. Na jedné straně nástupiště jsou vzduchotěsné dveře, na druhé proražený otvor do zdi vedoucí do dalších prostor stanice, jmenovitě ke Kolektoru a do Nemocnice. Ke kolejišti vede na každé straně jeden pilířovitý průchod, ty zbylé byly zastavěny do jednotlivých drobných místností. V jedné z nich sídlí předseda stanice, ale není to příliš honosné místo, což samo vypovídá o poměrech fungování stanice. Je to Mírová obchodní společnost či pouze Společnost, jak se jí tady říká, kdo je skutečným hybatelem dění na stanici. Ty máš tu čest být jejím zaměstnancem.&lt;/p&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
 (if: (history:) contains &quot;Tunel: NM-MUA&quot;)[&lt;span id=&quot;button&quot;&gt;[[Vejít do tunelu směrem k Muzeu|Tunel: NM-MUA]]&lt;/span&gt; ](else:)[&lt;span id=&quot;button&quot;&gt;[[Vejít do tunelu směrem k Muzeu|NM: Společnost]]&lt;/span&gt;] &lt;span id=&quot;button&quot;&gt;[[Vejít do tunelu směrem k Jiřího z Poděbrad|Tunel: NM-JP]]&lt;/span&gt; 
 (if: (history:) contains &quot;NM: Kolektor&quot;)[&lt;span id=&quot;button&quot;&gt;[[Jít ke stanovišti Společnosti|NM: Společnost]]&lt;/span&gt;] &lt;span id=&quot;button&quot;&gt;[[Jít ke vstupu do Kolektoru|NM: Kolektor]]&lt;/span&gt; &lt;span id=&quot;button&quot;&gt;[[Jít do Nemocnice|NM: Nemocnice]]&lt;/span&gt; (unless: (history:) contains &quot;NM: Výstup&quot;)[&lt;span id=&quot;button&quot;&gt;[[Vystoupit na povrch|NM: Výstup]]&lt;/span&gt;]   
@@ -289,8 +283,8 @@ Na chvíli tě přemůže nostalgie a porozhlédneš se po stanici. Všechno vyp
 &lt;p&gt;&quot;Dostali Martina s Danem. Martin to koupil rovnou do hlavy, neměl ani tušení, odkaď to přišlo. Danovi se povedlo utýct, běžel celou cestu zpátky až sem.&quot;&lt;/p&gt;
 &lt;p&gt;&quot;Kde se to stalo?&quot; zeptal jsi se.&lt;/p&gt;
 &lt;p&gt;&quot;Kousek za polovinou,&quot; pokračoval předák, &quot;u třinácté nebo čtrnácté odbočky. Dan to neví jistě, byl z toho úplně v šoku. Skoro mi bylo líto ho vyhodit.&quot;&lt;/p&gt;
-&lt;p&gt;Na tvůj nesouhlasný výraz předák ihned zareagoval obranou: &quot;Hele, opuštění nákladu je podle pravidel Společnosti vážnej prohřešek. Může bejt rád, že neskončí na Skalce. Každopádně teď se nějaký čas na Chodov nepodíváme, před chvíli tam vlítli vojáci a počítám, že jim bude trvat tak týden, než zase prohlasí Kolektor za bezpečnej.&quot;&lt;/p&gt;
-&lt;p&gt;Zdá se, že máš několikadenní neplánovanou dovolenou. Nemá cenu se tady dál zdržovat.&lt;/p&gt;
+&lt;p&gt;Na tvůj nesouhlasný výraz předák ihned zareagoval obranou: &quot;Hele, opuštění nákladu je podle pravidel Společnosti vážnej prohřešek. Může bejt rád, že neskončí na Skalce. Každopádně teď se nějaký čas na Chodov nepodíváme, před chvíli tam vlítli vojáci a počítám, že jim bude trvat tak týden, než zase prohlasí Kolektor za bezpečnej. Do tý doby se musíš uživit jinak, Společnost už si pro tebe něco najde.&quot;&lt;/p&gt;
+&lt;p&gt;Zdá se, že máš několikadenní neplánovanou dovolenou. Nemá cenu se tady dál zdržovat. Měl bys poslechnout předáka a zajít na stanoviště Společnosti, nějakou práci pro tebe mezitím určitě najdou.&lt;/p&gt;
 &lt;div id=&quot;button&quot;&gt;[[Vrátit se na nástupiště|NM: Nástupiště]]&lt;/div&gt;
 
 (unless: (history:) contains &quot;NM: Kolektor&quot; or (history:) contains &quot;NM: Společnost&quot;)[(set: $mise to 2)]</tw-passagedata><tw-passagedata pid="20" name="NM: Výstup" tags="" position="1700,1100" size="100,100">&lt;p&gt;Prohlížíš si velké, těžké a neprodyšně uzavřené dvěře, za kterými by měla být více než osmdesát metrů dlouhá šachta vedoucí tam nahoru. U dvěří stojí dvojice strážných s puškami přes rameno a stejně hrozivě vyhlížejícími kamennými výrazy. Člověk by si řekl, že není jasné, jestli hlídají, aby se nic nedostalo dovnitř, nebo spíš aby se nikdo nedostal ven. Na druhou, kdo by se chtěl dostat ven? Ty sám jsi se do Města nahoře nikdy nepodíval a upřímně, nikdy jsi o to příliš nestál. Na druhou stranu, v Kolektoru je u jednoho ze zborcených postanních tunelů úzký průduch, ze kterého fouká vítr. Patrně bude stejně otrávený jako všechno tam nahoře a podle nařízení Společnosti by se u něj karavany neměly moc dlouho zdržovat. Nicméně každý obchodník, který někdy v Kolektoru byl, moc dobře ví, že když se trochu přikrčíte a správně nakroutíte krk, můžete odtamtud vidět jasné světlo ze světa tam nahoře. Když jsi se do průduchu podíval poprvé, musel jsi uznat, že to má své kouzlo. Přesto jsi si zcela jist, že Město nahoře rozhodně není pro nikoho přívětivé místo.&lt;/p&gt;
@@ -320,13 +314,13 @@ Na chvíli tě přemůže nostalgie a porozhlédneš se po stanici. Všechno vyp
 (if: $mise is 7)[Doprovoď eskortu na Želivského a kup tam náboje.]
 (if: $mise is 8)[Dones náklad obchodnímu zástupci Společnosti na Můstek.]
 }&lt;/span&gt; &lt;span id=&quot;button&quot;&gt;(link-repeat: &quot;Uložit hru&quot;)[(alert: &quot;Vaše aktuální pozice byla uložena.&quot;)[(save-game: &quot;save file&quot;)]]&lt;/span&gt; &lt;span id=&quot;button&quot;&gt;(link-repeat: &quot;Nová hra&quot;)[(confirm: &quot;Přejete si resetovat svou pozici?&quot;)[(reload:)]]&lt;/span&gt;&lt;/div&gt;]</tw-passagedata><tw-passagedata pid="28" name="Úvod: Instrukce" tags="intro" position="1100,200" size="100,100">&lt;h3&gt;Pár informací na začátek:&lt;/h3&gt;
-&lt;p&gt;Předně děkuji za vaše rozhodnutí zahrát si tuto hru. Jedná se textovou adventuru, proto předem upozorňuji, že se neobejde bez trochy představivosti, budete celkem dost číst a úchvatných vizuálních scenérií se nejspíš nedočkáte. Jak název hry napovídá, Metro 2033: Praha sdílí universum s dílem ruského spisovatele Dmitrije Gluchovského Metro 2033 a jeho pokračováními a adaptacemi, nicméně jejím dějištěm není moskevské metro, nýbrž to pražské. Pokud jste měli v plánu si přečíst knihy nebo zahrát hry, nemusíte se bát žádných spoilerů. Prakticky jedinou styčnou plochou je základní premisa příběhu uvedená na úvodní straně.&lt;/p&gt;
-&lt;p&gt;Původní inspirací pro tuto hru z hlediska herních mechanismů byly takzvané &quot;simulátory chození&quot;, občas pejorativně užívané označení pro narativně orientované adventury, ve kterých je hlavní herní náplní zdánlivě bezcílné procházení se po mapě, při kterém hráč interakcí s okolím příběh postupně odkrývá. Jelikož tento žánr her nemusí vyhovovat každému, zahrnul jsem do Metra 2033: Praha i základní systém úkolových misí, které hráče metrem provedou a částečně ono bezcílné bloumání obhájí. Nicméně některé zajímavé útržky příběhu je stále možné nalézt i na místech, kam se při plnění úkolů běžně nepodíváte, a tak určitě nedoporučuji otrocké plnění instrukcí, nebo dokonce pokusy speedrunovat. Nebojte se tak prošmejdit každý dostupný kout nebo se znovu vrátit na některé již navštívené místo, za prodlevy při plnění úkolů žádné penalizace nejsou a kam se z příběhového hlediska zatím podívat nemáte, tam vás hra obvykle nepustí.&lt;/p&gt;
+&lt;p&gt;Předně děkuji za vaše rozhodnutí zahrát si tuto hru. Jedná se textovou adventuru, proto předem upozorňuji, že se neobejdete bez trochy představivosti, budete celkem dost číst a úchvatných vizuálních scenérií se nejspíš nedočkáte. Jak název hry napovídá, Metro 2033: Praha sdílí universum s dílem ruského spisovatele Dmitrije Gluchovského Metro 2033 a jeho pokračováními a adaptacemi, nicméně jejím dějištěm není moskevské metro, nýbrž to pražské. Pokud jste měli v plánu si přečíst knihy nebo zahrát hry, nemusíte se bát žádných spoilerů. Prakticky jedinou styčnou plochou je základní premisa příběhu uvedená na úvodní straně.&lt;/p&gt;
+&lt;p&gt;Původní inspirací pro tuto hru z hlediska herních mechanismů byly takzvané &quot;simulátory chození&quot;, občas pejorativně užívané označení pro narativně orientované adventury, ve kterých je hlavní herní náplní zdánlivě bezcílné procházení se po mapě, při kterém hráč interakcí s okolím příběh postupně odkrývá. Jelikož tento žánr her nemusí vyhovovat každému, zahrnul jsem do Metra 2033: Praha i základní systém úkolových misí, které hráče metrem provedou a částečně ono bezcílné bloumání obhájí. Nicméně některé zajímavé útržky příběhu je stále možné nalézt i na místech, kam se při plnění úkolů běžně nepodíváte, a tak určitě nedoporučuji otrocké plnění instrukcí, nebo dokonce pokusy speedrunovat. Nebojte se tak prošmejdit každý dostupný kout nebo se znovu vrátit (!) na některé již navštívené místo, za prodlevy při plnění úkolů žádné penalizace nejsou a kam se z příběhového hlediska zatím podívat nemáte, tam vás hra obvykle nepustí.&lt;/p&gt;
 &lt;h4&gt;Základní herní mechanismy&lt;/h4&gt;
 &lt;p&gt;Hra se skládá ze sítě na sebe navzájem odkazujících stránek textu, které dohromady tvoří nelineární interaktivní příběh. S podobným systémem jste se mohli setkat, pokud jste například někdy v životě drželi v rukou takzvaný gamebook, ovšem v elektronické podobě to funguje trochu elegantněji. Každá zobrazená stránka představuje jedno dostupné místo metra. Na jejím konci se můžete pomocí odkazů rozhodnout, kam se vydáte dál *(na obrázku)*.&lt;/p&gt;
-&lt;img src=&quot;https://i.imgur.com/xxxzG94.png&quot; alt=&quot;Navigace&quot; style=&quot;width: 75%; border: 1px solid white;&quot;&gt;
+&lt;div id=&quot;stred&quot;&gt;&lt;img src=&quot;https://i.imgur.com/xxxzG94.png&quot; alt=&quot;Navigace&quot; style=&quot;width: 75%; border: 1px solid white;&quot;&gt;&lt;/div&gt;
 &lt;p&gt;Pokud nebudete vědět, co dál, v dolní části stránky se nachází aktuální úkol, který můžete splnit. Hru si můžete rovněž kdykoliv uložit, zavřít stránky i prohlížeč a v budoucnu se vrátit a pokračovat, kde jste předtím skončili. Nebo můžete svoji pozici resetovat a začít novou hru.&lt;/p&gt;
-&lt;img src=&quot;https://i.imgur.com/E3sxfwY.png&quot; alt=&quot;Lišta s úkoly&quot; style=&quot;width: 75%; border: 1px solid white;&quot;&gt;
+&lt;div id=&quot;stred&quot;&gt;&lt;img src=&quot;https://i.imgur.com/E3sxfwY.png&quot; alt=&quot;Lišta s úkoly&quot; style=&quot;width: 75%; border: 1px solid white;&quot;&gt;&lt;/div&gt;
 
 &lt;p style=&quot;text-align:right; margin-top: 5%; margin-bottom: 10%;&quot;&gt;Přeji příjemný herní prožitek
 marquecz&lt;/p&gt;
